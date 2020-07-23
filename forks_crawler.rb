@@ -16,8 +16,8 @@ class ForksCrawler
 
   def filter(list)
     list.delete!('{}[]"')
-    list.tr(': true,', '')
     list.tr(',', "\n")
+    list.tr(': true', '')
     list
   end
 
